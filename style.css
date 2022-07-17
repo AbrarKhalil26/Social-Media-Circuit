@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ------------------------------------------------------ */
+/* -------------------- Style Global -------------------- */
+html,body{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #9494b8;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------------------------------ */
+/* -------------------- Style Button -------------------- */
+.container .social{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    animation: rotate 1.5s linear infinite alternate;
+    z-index: 3;
+    cursor: pointer;
+}
+.container .social:hover{
+    animation-play-state: paused;
+}
+.container .social button,.container .social span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container .social button{
+    background-color: #000;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 3;
+}
+.container .social span{
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(14px);
+}
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+/* -------------------------------------------------------------- */
+/* ---------------------------Style Icons ----------------------- */
+.container .icons{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    animation: animation-icons 20s linear infinite;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container .icons:hover{
+    animation-play-state: paused;
+}
+.container .icons i{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #000;
+    color: white;
+    font-size: 21px;
+    padding: 20px;
+}
+.container .icons .bg-icon1{
+    top: 45%;
+    right: 4%;
+    background: linear-gradient(#000066,#0000ff,#ccccff);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon2{
+    top: 45%;
+    left: 4%;
+    background: linear-gradient(rgb(76, 172, 232),#4dd2ff,#ccf2ff);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon3{
+    top: 19%;
+    left: 15%;
+    background: linear-gradient(#990099,#e600e6,#ffb3ff);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon4{
+    top: 19%;
+    right: 15%;
+    background: linear-gradient(#008000,#00ff00,#b3ffb3);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon5{
+    top: 5%;
+    left: 43%;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon6{
+    bottom: 5%;
+    left: 43%;
+    background: linear-gradient(#404040,#808080,#e6e6e6);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon7{
+    bottom: 17%;
+    left: 15%;
+    background: linear-gradient(#000066,#0000ff,#ccccff);
+    transition: all 0.3s;
+}
+.container .icons .bg-icon8{
+    bottom: 17%;
+    right: 15%;
+    background: linear-gradient(#990000,#ff3333,#ffcccc);
+    transition: all 0.3s;
+}
+@keyframes animation-icons {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container .bg-icon1,
+.container .bg-icon2,
+.container .bg-icon3,
+.container .bg-icon4,
+.container .bg-icon5,
+.container .bg-icon6,
+.container .bg-icon7,
+.container .bg-icon8{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.container .bg-icon1 i,
+.container .bg-icon2 i,
+.container .bg-icon3 i,
+.container .bg-icon4 i,
+.container .bg-icon5 i,
+.container .bg-icon6 i,
+.container .bg-icon7 i,
+.container .bg-icon8 i,
+.container .icons span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container .bg-icon1 i,
+.container .bg-icon2 i,
+.container .bg-icon3 i,
+.container .bg-icon4 i,
+.container .bg-icon5 i,
+.container .bg-icon6 i,
+.container .bg-icon7 i,
+.container .bg-icon8 i{
+    background-color: #000;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 3;
+}
+.container .icons span{
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(14px);
+}
+/* -------------------------------------------------------- */
+/* -----------------------Part js ------------------------- */
+.container .newClass .bg-icon1,
+.container .newClass .bg-icon2,
+.container .newClass .bg-icon3,
+.container .newClass .bg-icon4,
+.container .newClass .bg-icon5,
+.container .newClass .bg-icon6,
+.container .newClass .bg-icon7,
+.container .newClass .bg-icon8 {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.container .newClass .bg-icon1{
+    right: 40% !important;
+}
+.container .newClass .bg-icon2{
+    left: 40% !important;
+}
+.container .newClass .bg-icon3{
+    top: 40% !important;
+    left: 30% !important;
+}
+.container .newClass .bg-icon4{
+    top: 40% !important;
+    right: 30% !important;
+}
+.container .newClass .bg-icon5{
+    top: 40% !important;
+}
+.container .newClass .bg-icon6{
+    bottom: 40% !important;
+}
+.container .newClass .bg-icon7{
+    bottom: 40% !important;
+    left: 30% !important;
+}
+.container .newClass .bg-icon8{
+    bottom: 40% !important;
+    right: 30% !important;
+}
