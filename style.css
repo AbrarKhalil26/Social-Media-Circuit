@@ -327,3 +327,13 @@ html,body{
     bottom: 17% !important;
     right: 15% !important;
 }
+/* -------------------------------------------------------- */
+/* -----------------------Media  ------------------------- */
+@media only screen and (max-width: 375px) {
+    .click-here{
+        margin: 20px;
+    }
+    .container{
+        margin: 40px;
+    }
+}
