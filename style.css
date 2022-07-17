@@ -19,6 +19,82 @@ html,body{
     align-items: center;
 }
 /* ------------------------------------------------------ */
+/* -------------------- Style Arrow -------------------- */
+.click-here{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.click-here p{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+}
+.icon-arrow{
+    width: 15px;
+    height: 80px;
+    background-color: #000;
+    position: relative;
+    top: 20px;
+    border-radius: 50px;
+    animation: animate-arrow 2s linear infinite;
+}
+.icon-arrow::after{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 40px;
+    background-color: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -17px;
+    bottom: 4px;
+    border-radius: 50px 50px 0 0;
+    animation: animate-arrow-AB 2s linear infinite;
+}
+.icon-arrow::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 40px;
+    background-color: #000;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -17px;
+    bottom: 4px;
+    border-radius: 50px 50px 0 0;
+    animation: animate-arrow-AB 2s linear infinite;
+}
+@keyframes animate-arrow-AB {
+    0%{
+        background-color: #000;
+    }
+    50%{
+        background-color: #504e4e;
+    }
+    100%{
+        background-color: #000;
+    }
+}
+@keyframes animate-arrow {
+    0%{
+        top: 20px;
+        background-color: #000;
+    }
+    50%{
+        top: 40px;
+        background-color: #504e4e;
+    }
+    100%{
+        top: 20px;
+        background-color: #000;
+    }
+}
+/* ------------------------------------------------------ */
 /* -------------------- Style Button -------------------- */
 .container .social{
     position: absolute;
@@ -96,49 +172,49 @@ html,body{
 }
 .container .icons .bg-icon1{
     top: 45%;
-    right: 4%;
+    right: 40%;
     background: linear-gradient(#000066,#0000ff,#ccccff);
     transition: all 0.3s;
 }
 .container .icons .bg-icon2{
     top: 45%;
-    left: 4%;
+    left: 40%;
     background: linear-gradient(rgb(76, 172, 232),#4dd2ff,#ccf2ff);
     transition: all 0.3s;
 }
 .container .icons .bg-icon3{
-    top: 19%;
-    left: 15%;
+    top: 40%;
+    left: 30%;
     background: linear-gradient(#990099,#e600e6,#ffb3ff);
     transition: all 0.3s;
 }
 .container .icons .bg-icon4{
-    top: 19%;
-    right: 15%;
+    top: 40%;
+    right: 30%;
     background: linear-gradient(#008000,#00ff00,#b3ffb3);
     transition: all 0.3s;
 }
 .container .icons .bg-icon5{
-    top: 5%;
+    top: 40%;
     left: 43%;
     background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
     transition: all 0.3s;
 }
 .container .icons .bg-icon6{
-    bottom: 5%;
+    bottom: 40%;
     left: 43%;
     background: linear-gradient(#404040,#808080,#e6e6e6);
     transition: all 0.3s;
 }
 .container .icons .bg-icon7{
-    bottom: 17%;
-    left: 15%;
+    bottom: 40%;
+    left: 30%;
     background: linear-gradient(#000066,#0000ff,#ccccff);
     transition: all 0.3s;
 }
 .container .icons .bg-icon8{
-    bottom: 17%;
-    right: 15%;
+    bottom: 40%;
+    right: 30%;
     background: linear-gradient(#990000,#ff3333,#ffcccc);
     transition: all 0.3s;
 }
@@ -166,6 +242,8 @@ html,body{
     height: 70px;
     border-radius: 50%;
     cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
 }
 .container .bg-icon1 i,
 .container .bg-icon2 i,
@@ -218,35 +296,34 @@ html,body{
 .container .newClass .bg-icon6,
 .container .newClass .bg-icon7,
 .container .newClass .bg-icon8 {
-    opacity: 0;
-    transition: all 0.3s;
+    opacity: 1;
 }
 
 .container .newClass .bg-icon1{
-    right: 40% !important;
+    right: 4% !important;
 }
 .container .newClass .bg-icon2{
-    left: 40% !important;
+    left: 4% !important;
 }
 .container .newClass .bg-icon3{
-    top: 40% !important;
-    left: 30% !important;
+    top: 19% !important;
+    left: 15% !important;
 }
 .container .newClass .bg-icon4{
-    top: 40% !important;
-    right: 30% !important;
+    top: 19% !important;
+    right: 15% !important;
 }
 .container .newClass .bg-icon5{
-    top: 40% !important;
+    top: 5% !important;
 }
 .container .newClass .bg-icon6{
-    bottom: 40% !important;
+    bottom: 5% !important;
 }
 .container .newClass .bg-icon7{
-    bottom: 40% !important;
-    left: 30% !important;
+    bottom: 17% !important;
+    left: 15% !important;
 }
 .container .newClass .bg-icon8{
-    bottom: 40% !important;
-    right: 30% !important;
+    bottom: 17% !important;
+    right: 15% !important;
 }
